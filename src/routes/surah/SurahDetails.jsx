@@ -11,6 +11,8 @@ import Download from './Download';
 import PlayButton from '../../components/other/PlayButton';
 import { HashLink as Link } from 'react-router-hash-link';
 import { surahsCount } from '../../constants';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
 
 const SurahDetails = () => {
 
@@ -350,13 +352,14 @@ const SurahDetails = () => {
                     </div>
                     <div className="flex justify-between mb-9 items-center">
                         <div>
-                            <audio
+                            {/* <audio
                                 ref={audioRef}
                                 onEnded={() => { setIsEnded(true) }}
                                 src={audio}
-                            />
+                            /> */}
+
                             <div className="flex flex-col items-start gap-4">
-                                <PlayButton isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+                                {/* <PlayButton isPlaying={isPlaying} setIsPlaying={setIsPlaying} /> */}
                                 <Link to={{
                                     pathname: '/quran_download',
                                     search: `?sheikh=${sheikh}`
@@ -394,6 +397,20 @@ const SurahDetails = () => {
                             السورة التالية
                         </Link>
                     </div>
+                </div>
+                <div className='sticky w-full bottom-0 left-0' dir='ltr'>
+                    <AudioPlayer
+                        // autoPlay
+                        // ref={audioRef}
+                        className='bg-[#112527] text-[white!important]'
+                        src={audio}
+                        onPlay={e => console.log("onPlay")}
+                        autoPlayAfterSrcChange={false}
+                        showFilledProgress={false}
+                        onEnded={() => { setIsEnded(true) }}
+
+                    // other props here
+                    />
                 </div>
             </>
     )

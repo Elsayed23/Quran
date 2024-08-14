@@ -35,6 +35,22 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.rhap_time {
+    color: #f3f3f3 !important;
+}
+
+.rhap_main-controls-button {
+    color: #f3f3f3 !important;
+}
+
+.rhap_volume-button {
+    color: #f3f3f3 !important;
+}
+
+.rhap_repeat-button {
+    color: #f3f3f3 !important;
+}
+
 body {
     direction: rtl;
     padding-top: 117px;
@@ -43,6 +59,7 @@ body {
     color: #e7e9ea;
     overflow-x: hidden;
     background-color: #1f2125;
+    /* padding-bottom: calc(77px + 88px); */
 }
 
 .select ul {

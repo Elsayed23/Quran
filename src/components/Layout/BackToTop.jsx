@@ -21,7 +21,7 @@ const BackToTop = () => {
 
      return (
           <motion.div
-               className="fixed bottom-8 right-8 cursor-pointer hover:scale-150 bg-[#2ca4ab] text-white flex justify-center items-center text-4xl w-12 h-12 z-50 rounded-full"
+               className="fixed bottom-28 right-8 cursor-pointer hover:scale-150 bg-[#2ca4ab] text-white flex justify-center items-center text-4xl w-12 h-12 z-50 rounded-full"
                initial={{
                     opacity: 0,
                     scale: 0
